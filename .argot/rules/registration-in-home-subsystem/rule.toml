@@ -1,0 +1,10 @@
+[rule]
+schema = 1
+name = "registration-in-home-subsystem"
+label = "registration outside its subsystem"
+description = "a subsystem registration call used outside the directory that owns it"
+severity = "warn"
+languages = ["pascal"]
+
+[engine]
+script = "check.rhai"

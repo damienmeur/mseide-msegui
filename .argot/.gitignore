@@ -1,0 +1,14 @@
+# argot writes a rebuildable voice model here — regenerate any time with `argot fit`.
+# The model and the heavy `argot extract` dataset are build artifacts, not source;
+# CI restores them from cache or re-fits. Delete this file to commit them yourself.
+# (Your excludes and mutes live in argot.toml at the repo root — that one is committed.)
+*
+
+# Custom rules are team config, not a build artifact — they must ship with the
+# repo so every contributor and CI run gets them on pull.
+!rules/
+!rules/**
+# ...and this file itself, so the exception above survives a fresh clone.
+# If `argot init` ever rewrites it, git will show the diff rather than
+# silently dropping the rules from version control.
+!.gitignore

@@ -1,0 +1,6 @@
+[
+  {
+    "line": 13,
+    "message": "regopensslinit() belongs in lib/common/crypto — that subsystem owns its registration; calling it from here spreads registration across the tree"
+  }
+]

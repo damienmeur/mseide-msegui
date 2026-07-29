@@ -1,0 +1,12 @@
+{
+  "mcpServers": {
+    "argot": {
+      "type": "stdio",
+      "command": "argot",
+      "args": [
+        "mcp"
+      ],
+      "env": {}
+    }
+  }
+}

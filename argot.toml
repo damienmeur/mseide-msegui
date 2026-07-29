@@ -1,0 +1,17 @@
+# argot — https://argot.tmonier.com/docs/configure/
+#
+# What should NOT shape this repository's voice. Every entry below is a
+# deliberate, reviewable decision backed by a measurement; see the PR that
+# introduced this file for the numbers.
+
+[exclude]
+paths = [
+  "lib/common/mzeoslib/",       # vendored third-party ZeosLib (Zeos Development Group, 1999-2020): 21% of the corpus, touched by 2 commits in 9,835
+  "**/*_mfm.pas",               # machine-generated form data: 105/105 are `objdata` byte blobs emitted by the form designer, and 7.4% of all churn
+  "lib/common/fpccompatibility/",  # forked Free Pascal FCL units carrying upstream's idiom, not MSEgui's: 9.4% of the corpus against 2.7% of the churn
+  "apps/demo/",                 # example application, not product code
+  "apps/facedemo/",             # example application, not product code
+  "apps/i18ndemo/",             # example application, not product code
+  "apps/myide/",                # minimal example IDE, not product code
+  "apps/ide/templates/",        # IDE code-generation skeletons built from ${%UNITNAME%} placeholders, not compilable Pascal
+]
