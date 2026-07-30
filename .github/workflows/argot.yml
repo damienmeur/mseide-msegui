@@ -1,0 +1,25 @@
+name: argot
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+permissions:
+  contents: write          # publish-badge pushes the endpoint JSON to the badges branch
+  pull-requests: write     # the sticky score comment
+  security-events: write   # SARIF code-scanning annotations
+
+jobs:
+  voice:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0    # Action reads the committed snapshot from the PR base
+      - uses: get-tmonier/argot@v0.2.118
+        with:
+          # Pin the binary too: argot-version defaults to "latest", so pinning
+          # the wrapper tag alone still lets the binary float against a snapshot
+          # that carries a model_hash and config_version.
+          argot-version: "0.2.118"
+          publish-badge: true
