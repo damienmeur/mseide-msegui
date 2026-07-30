@@ -16,10 +16,10 @@ jobs:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0    # Action reads the committed snapshot from the PR base
-      - uses: get-tmonier/argot@v0.2.118
+      - uses: get-tmonier/argot@v0.2.119
         with:
           # Pin the binary too: argot-version defaults to "latest", so pinning
           # the wrapper tag alone still lets the binary float against a snapshot
           # that carries a model_hash and config_version.
-          argot-version: "0.2.118"
+          argot-version: "0.2.119"
           publish-badge: true
