@@ -1,5 +1,7 @@
 # MSEide+MSEgui Pascal Cross Platform GUI Development System
 
+[![argot](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/damienmeur/mseide-msegui/badges/argot.json)](https://argot.tmonier.com)
+
 2026-05-07 Version 5.14.0.
 Copyright (c) 1999-2026 by Martin Schreiber and friends.
 
