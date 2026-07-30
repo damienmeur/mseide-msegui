@@ -121,7 +121,6 @@ function gui_settransientfor(var awindow: windowty;
 function gui_movewindowrect(id: winidty; const dist: pointty;
                                          const rect: rectty): guierrorty;
 function gui_windowatpos(const pos: pointty): winidty;
-function gui_getscreenrect(const id: winidty): rectty; //0 -> virtual screen
 function gui_getworkarea(id: winidty): rectty;
 procedure gui_getppmm(id: winidty; out appmmwidth,appmmheight: flo64);
                                            //0.0 if not supported
