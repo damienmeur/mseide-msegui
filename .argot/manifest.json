@@ -1,10 +1,10 @@
 {
   "manifest_version": 1,
   "config_version": 3,
-  "model_hash": "a50b9a948a7e",
-  "scorer_config_hash": "2d0e1d1af760",
-  "fit_commit_sha": "4233521f2e5e627cbbc765000e5fc986f1d423af",
-  "fit_timestamp": "2026-07-30T13:09:41+00:00",
+  "model_hash": "9d81a01487a7",
+  "scorer_config_hash": "93816c8d82de",
+  "fit_commit_sha": "de6a3913a170dbd09035c01eee287c9d350bad87",
+  "fit_timestamp": "2026-07-30T15:41:12+00:00",
   "corpus": {
     "files": 507,
     "lines": 539931
@@ -12,8 +12,8 @@
   "languages": [
     {
       "language": "pascal",
-      "threshold": 5.4496093697380505,
-      "model_hash": "182b39144f5c3b00ca2d614877a28ba7",
+      "threshold": 5.246457165207801,
+      "model_hash": "58eb7811d9dab9b25493dfb22975d94b",
       "n_cal": 100,
       "files": 503
     }

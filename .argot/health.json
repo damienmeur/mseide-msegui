@@ -1,5 +1,5 @@
 {
-  "fit_sha": "4233521f2e5e627cbbc765000e5fc986f1d423af",
+  "fit_sha": "de6a3913a170dbd09035c01eee287c9d350bad87",
   "config_fingerprint": "e6af91ff18a27ab5",
   "drift_candidates": [],
   "refresh_profile": {
@@ -7,7 +7,7 @@
     "source": {
       "files": 507,
       "lines": 553572,
-      "functions": 26886,
+      "functions": 27888,
       "languages": {
         "c": {
           "files": 2,
