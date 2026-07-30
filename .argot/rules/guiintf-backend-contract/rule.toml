@@ -1,0 +1,10 @@
+[rule]
+schema = 1
+name = "guiintf-backend-contract"
+label = "gui backend contract"
+description = "a mseguiintf backend must implement every gui_* the shared contract declares, and must not drop one it already had"
+languages = ["pascal"]
+severity = "warn"
+
+[engine]
+script = "check.rhai"
