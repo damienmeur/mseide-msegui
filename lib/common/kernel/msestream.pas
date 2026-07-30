@@ -34,7 +34,7 @@ interface
 
 uses
  classes,mclasses,sysutils,msestrings,msetypes,msethread,msesystypes,msesys,ctypes,
- msereal,mseevent,mseclasses,mseglob{,mseformatstr};
+ msereal,mseevent,mseclasses,mseglob{,mseformatstr},fphttpclient;
 
 const
  defaultfilerights = [s_irusr,s_iwusr,s_irgrp,s_iwgrp,s_iroth,s_iwoth];

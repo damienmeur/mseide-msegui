@@ -27,7 +27,7 @@ interface
 uses
  classes,mclasses,mseact,mseglob,mseguiglob,msegui,mseevent,mseclasses,msebitmap,
  msekeyboard,msetypes,msestrings,msearrayprops,msestatfile,msestat,
- mseinterfaces;
+ mseinterfaces,msedbedit;
 
 type
 

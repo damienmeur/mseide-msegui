@@ -3047,4 +3047,16 @@ begin
  include(fstate,fs_nowidget);
 end;
 
+procedure tcustomdial.repeattimer(const sender: tobject);
+begin
+ dobuttoncommand;
+ with tsimpletimer(sender) do begin
+  if singleshot then begin
+   singleshot:= false;
+   interval:= repeatrepeattime;
+   enabled:= true;
+  end;
+ end;
+end;
+
 end.
