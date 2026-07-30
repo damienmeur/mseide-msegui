@@ -7,3 +7,6 @@
 *.bak?
 *.rst
 *.rsj
+
+# argot personal config overrides — not shared with the team.
+argot.local.toml

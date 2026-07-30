@@ -1,0 +1,38 @@
+[exclude]
+paths = [
+  # Vendored ZEOS database library: argot init --suggest rates it
+  # not-authored-here (edit_ratio 0.035) — 100% arrived in one commit,
+  # 98% never edited since, 2 commits in 20 years. The repo stores it,
+  # it does not write it.
+  "lib/common/mzeoslib/",
+
+  # Machine output of tools/form2pas: every file is nothing but
+  # `objdata: record size: integer; data: array[0..N] of byte` literals.
+  # 105 files / 49,569 lines. Scattered one-per-form, so it needs a glob.
+  "**/*_mfm.pas",
+
+  # Machine output of tools/bmp2pas: embedded bitmaps as byte arrays,
+  # same shape as the _mfm units. 18 files / 31,775 lines.
+  "**/*_bmp.pas",
+
+  # Forked Free Pascal RTL/FCL units renamed with m/mse prefixes
+  # (mdb.pas, mclasses.pas, mse_dbf_*, msefpreadtiff.pas). Every header
+  # reads "part of the Free Pascal run time library ... Copyright (c)
+  # ... Free Pascal development team ... See the file COPYING.FPC".
+  # MSEgui patches these forks, but the 86,613 lines are FPC's voice.
+  "lib/common/fpccompatibility/",
+
+  # Sample applications that teach third-party API use (e.g.
+  # apps/myide/regmycomps.pas exists to demonstrate
+  # registercomponents('My',[tmybutton])) — deliberately simpler than
+  # production code.
+  "apps/demo/",
+  "apps/facedemo/",
+  "apps/i18ndemo/",
+  "apps/myide/",
+
+  # Peripheral build-time utilities (bmp2pas, data2pas, form2pas,
+  # unitdep, xft2gs, i18n) plus the POdemo/MOdemo_FormScan demo trees:
+  # a different genre from the GUI framework, 2 commits in 3 years.
+  "tools/",
+]

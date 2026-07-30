@@ -1,0 +1,27 @@
+{
+  "manifest_version": 1,
+  "config_version": 3,
+  "model_hash": "a50b9a948a7e",
+  "scorer_config_hash": "5542ea1408cf",
+  "fit_commit_sha": "4233521f2e5e627cbbc765000e5fc986f1d423af",
+  "fit_timestamp": "2026-07-30T09:48:25+00:00",
+  "corpus": {
+    "files": 507,
+    "lines": 539931
+  },
+  "languages": [
+    {
+      "language": "pascal",
+      "threshold": 5.4496093697380505,
+      "model_hash": "182b39144f5c3b00ca2d614877a28ba7",
+      "n_cal": 100,
+      "files": 503
+    }
+  ],
+  "unlearnable_languages": [
+    {
+      "language": "c",
+      "files": 2
+    }
+  ]
+}

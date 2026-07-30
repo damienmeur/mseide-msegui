@@ -1,0 +1,43 @@
+---
+name: Argot
+
+on:
+  push:
+    branches:
+      - master
+      - main
+  pull_request:
+    branches:
+      - master
+      - main
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+  pull-requests: write     # sticky findings comment
+  security-events: write   # SARIF code-scanning annotations
+
+jobs:
+  voice:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+    # fetch-depth: 0 so the Action can read the committed .argot/ fit
+    # snapshot from the PR base — a PR cannot self-certify by changing
+    # its own snapshot. The Action never fits or rebuilds the index.
+    - name: Checkout
+      uses: actions/checkout@v7
+      with:
+        fetch-depth: 0
+
+    # argot-version pins the binary too — the Action's default is "latest",
+    # and the committed snapshot was fitted by 0.2.116 (config_version 3).
+    # fail-on-hits stays off: findings inform the PR, they do not gate it.
+    - name: Score against the repo voice
+      uses: get-tmonier/argot@v0.2.116
+      with:
+        argot-version: "0.2.116"
