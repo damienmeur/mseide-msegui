@@ -1,0 +1,33 @@
+{
+  "fit_sha": "4233521f2e5e627cbbc765000e5fc986f1d423af",
+  "config_fingerprint": "e6af91ff18a27ab5",
+  "drift_candidates": [],
+  "refresh_profile": {
+    "schema": 1,
+    "source": {
+      "files": 507,
+      "lines": 553572,
+      "functions": 26886,
+      "languages": {
+        "c": {
+          "files": 2,
+          "lines": 66
+        },
+        "pascal": {
+          "files": 505,
+          "lines": 553506
+        }
+      },
+      "areas": {
+        "apps/ide": {
+          "files": 93,
+          "lines": 45958
+        },
+        "lib/common": {
+          "files": 414,
+          "lines": 507614
+        }
+      }
+    }
+  }
+}
