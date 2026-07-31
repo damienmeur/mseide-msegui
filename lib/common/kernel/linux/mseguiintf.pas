@@ -2673,28 +2673,6 @@ begin
 endlab:
 end;
 
-function gui_getscreenrect(const id: winidty): rectty; //0 -> virtual screen
-var
- i1: int32;
-label
- endlab;
-begin
- gdi_lock();
- if id <> 0 then begin
-  i1:= getscreenrectindex(id);
-  if i1 >= 0 then begin
-   result:= screenrects[i1].rect;
-   goto endlab;
-  end;
- end;
- result.pos:= nullpoint;
-{$ifdef FPC} {$checkpointer off} {$endif}
- result.cx:= defscreen^.width;
- result.cy:= defscreen^ .height;
-{$ifdef FPC} {$checkpointer default} {$endif}
-endlab:
- gdi_unlock();
-end;
 
 
 function gui_getworkarea(id: winidty): rectty;
